@@ -1,0 +1,24 @@
+
+<div class="jobs-container">
+<mat-card *ngFor="let job of jobsList">
+    <mat-card-header>
+      <mat-card-title>{{job.company}}</mat-card-title>
+      <mat-card-subtitle>{{job.jobTitle}}</mat-card-subtitle>
+    </mat-card-header>
+     
+    <mat-card-content>
+      <p>  
+       {{job.designation}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Apply</button>
+    </mat-card-actions>
+    <p>Posted on {{job.postedOn}}</p>
+    <mat-card-actions>
+      <button mat-stroked-button color="accent" [routerLink]="['/home',job._id]" (click)="onViewJob()">View</button>
+    </mat-card-actions>
+  </mat-card>
+
+  </div>
+

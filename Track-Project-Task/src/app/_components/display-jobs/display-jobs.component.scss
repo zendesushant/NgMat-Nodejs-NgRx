@@ -1,0 +1,17 @@
+.jobs-container{
+  
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 50px;
+    gap:30px;
+    margin-top: 5%;
+    
+    
+    
+}
+
+.mat-card{
+    height: 250px;
+    width: 300px;
+}

@@ -1,0 +1,77 @@
+<div class="job-form-container">
+<form  [formGroup]="jobForm" (ngSubmit)="onCreatingJob()">
+<div class="row">
+    <div class="col">
+    <mat-form-field>
+        <mat-label>Company Name</mat-label>
+        <input autocomplete="off" type="text" matInput formControlName="company">
+    </mat-form-field>
+</div>
+</div>
+    <div class="row">
+        <div class="col">
+    <mat-form-field>
+        <mat-label>Job Title</mat-label>
+        <input autocomplete="off" type="text" matInput formControlName="jobTitle">
+    </mat-form-field>
+    </div>
+    </div>
+    <div class="row">
+    <div class="col">
+    <mat-form-field>
+        <mat-label>Designation</mat-label>
+        <input autocomplete="off" type="text" matInput formControlName="designation">
+    </mat-form-field>
+</div>
+</div>
+
+<div class="row">
+    <div class="col">
+    <mat-form-field>
+        <mat-label>Experience (in month's)</mat-label>
+        <input autocomplete="off" type="text" matInput formControlName="experience">
+    </mat-form-field>
+</div>
+</div>
+
+<div class="row">
+<div class="col">
+    <mat-form-field>
+        <mat-label>Location</mat-label>
+        <input autocomplete="off" type="text" matInput formControlName="location">
+    </mat-form-field>
+</div>
+</div>
+
+<div class="row">
+<div class="col">
+    <mat-form-field>
+        <mat-label>Offered Salary (Negotiable)</mat-label>
+        <input autocomplete="off" type="text" matInput formControlName="offeredSalary">
+    </mat-form-field>
+</div>
+</div>
+
+<div class="row">
+<div class="col">
+    <mat-form-field>
+        <mat-label>Notice Period (in day's)</mat-label>
+        <input autocomplete="off" type="text" matInput formControlName="noticePeriod">
+    </mat-form-field>
+</div>
+</div>
+
+<div class="row">
+<div class="col">
+    <mat-form-field>
+        <mat-label>Required Skills</mat-label>
+        <input autocomplete="off" type="text" matInput formControlName="requiredSkills">
+    </mat-form-field>
+</div>
+</div>
+<div class="row">
+    <button  [ngStyle]="{width:'400px',marginLeft:'110px'}"mat-raised-button color="primary"  [disabled]="!jobForm.valid"type="submit">Create Job</button>
+
+</div>
+</form>
+</div>

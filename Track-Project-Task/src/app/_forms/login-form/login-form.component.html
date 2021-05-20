@@ -1,0 +1,57 @@
+
+
+<div class="formContainer">
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+    
+        <div class="container">
+            <mat-card>
+                <mat-card-title>Login To Universal Stop</mat-card-title>
+                <mat-card-content>
+    <div class=" alignItems row">
+
+    
+        <div class="col">
+        <mat-form-field>
+            <mat-label>User Nam</mat-label>
+            <input  autoComplete="off"matInput placeholder="Email" formControlName="username" required>
+            <mat-hint *ngIf="!loginForm.get('username').valid && loginForm.get('username').touched">*Field Required</mat-hint>
+        </mat-form-field>
+        </div>
+
+        <div class="col">
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input autoComplete="off"type="password" matInput placeholder="Password" formControlName="password" required>
+            <mat-hint *ngIf="!loginForm.get('password').valid && loginForm.get('password').touched">*Field Required</mat-hint>
+        </mat-form-field>
+    </div> 
+    </div>
+    </mat-card-content>
+    <div class="row">
+        <button class="loginAndCreateBtn" mat-raised-button color="primary" [disabled]="!loginForm.valid" type="submit">Login</button>
+    
+    </div>
+    <div class="row">
+        <button target="_blank" class="loginAndCreateBtn"  [ngStyle]="{marginTop:'20px'}"mat-raised-button color="accent" (click)="redirectToSignup()">don't have an accout? signup</button>
+    
+    </div>
+<div class='row'>
+    
+    <div class="col-4">
+        <button type="button" class="socialLoginBtns" [ngStyle]="{marginTop:'20px'}" mat-raised-button color="primary" (click)="onSignInWithFB()"><i [ngStyle]="{marginRight:'15px',fontSize:'25px'}" class="fab fa-facebook-f"></i>Continue with Facebook</button>
+    
+    </div>
+    <div class="col-4">
+        <button  type="button" class="socialLoginBtns" [ngStyle]="{marginTop:'20px'}" mat-raised-button color="warn" (click)="onSignInWithGoogle()"><i [ngStyle]="{marginRight:'15px',fontSize:'25px'}" class="fab fa-google"></i>Continue With Google</button>
+    
+    </div>
+
+    
+</div>
+    </mat-card>
+    </div>
+    
+    </form>
+    </div>
+    <app-users-data></app-users-data>
+    

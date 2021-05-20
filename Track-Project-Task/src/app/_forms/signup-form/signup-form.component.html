@@ -1,0 +1,52 @@
+
+
+<div class="formContainer">
+    <form [formGroup]="signupForm" (ngSubmit)="onSignup()">
+    
+        <div class="container">
+            <mat-card>
+                <mat-card-title>Signup for Universal Stop</mat-card-title>
+                <mat-card-content>
+    <div class=" alignItems row">
+       
+    
+        <div class="col">
+    
+        <mat-form-field>
+            <mat-label>MID</mat-label>
+            <input autoComplete="off" matInput placeholder="ex:M1057789" formControlName="mid"  required>
+            <mat-hint *ngIf="!signupForm.get('mid').valid && signupForm.get('mid').touched">*Field Required</mat-hint>
+        </mat-form-field>
+        </div>
+    
+        <div class="col">
+        <mat-form-field>
+            <mat-label>User Name</mat-label>
+            <input  autoComplete="off"matInput placeholder="Email" formControlName="username" required>
+            <mat-hint *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched">*Field Required</mat-hint>
+        </mat-form-field>
+        </div>
+    
+        <div class="col">
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input autoComplete="off"type="password" matInput placeholder="Password" formControlName="password" required>
+            <mat-hint *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched">*Field Required</mat-hint>
+        </mat-form-field>
+    </div> 
+    </div>
+    </mat-card-content>
+    <div class="row">
+        <button  mat-raised-button color="primary" [disabled]="!signupForm.valid" type="submit">Signup</button>
+    
+    </div>
+    <div class="row">
+        <button [ngStyle]="{marginTop:'10px'}" mat-raised-button color="primary"  type="button" (click)="onLogin()">Login</button>
+    
+    </div>
+    </mat-card>
+    </div>
+    
+    </form>
+    </div>
+    <app-users-data></app-users-data>
