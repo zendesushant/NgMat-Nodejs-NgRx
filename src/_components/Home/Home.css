@@ -1,0 +1,15 @@
+.card{
+    height: 50px;
+    width: 400px;
+    background-color: antiquewhite;
+    color: black;
+    
+}
+
+.resp-container{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
